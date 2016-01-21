@@ -1,0 +1,60 @@
+$navbar-font-color: #646464;
+$navbar-height: 85px;
+/*$primary-color: color("materialize-red", "lighten-2") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+*/
+$secondary-color: #6f3ce1 !default;
+/*$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("light-blue", "darken-1") !default;
+*/ 
+
+@import "materialize";
+
+@media only screen and (min-width: 601px){
+
+  	nav a.brand-logo{
+  		padding-top: 4px;
+  		padding-left: 40px;
+  		top: -2px;
+  		left: 0;
+  	}
+}
+
+nav span#logo-text, nav ul a{
+	color: #646464;
+}
+nav span#logo-text{
+	margin-left: 10px;
+ 	vertical-align: top;
+}
+
+nav .contenedor{
+	display: flex;
+  	justify-content: center;
+}
+
+nav ul#nav-sesion{
+	position: absolute;
+  	right: 0px;
+}
+nav ul#nav-sesion li{
+	position: relative;
+}
+nav ul#nav-sesion li:hover{
+	background: transparent;
+}
+nav ul#nav-sesion li:first-child:after{
+	content: "|";
+	display: inline-block;
+	color: #646464;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+nav ul#nav-sesion li a{
+	display: inline;
+}
+
