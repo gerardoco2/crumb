@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+
 gem 'materialize-sass'
+gem 'rails', '4.2.5'
 #agregar bootstrap y asegurar saas en rails
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
