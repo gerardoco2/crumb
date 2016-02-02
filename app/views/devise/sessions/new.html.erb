@@ -1,0 +1,25 @@
+<div class="row" style="margin-top: 4rem;">
+	<div class="col-md-6 col-xs-12">
+			<h2>Iniciar Sesion</h2>
+
+			<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+			  <div class="form-inputs">
+			    <%= f.input :email, required: false, autofocus: true %>
+			    <%= f.input :password, required: false %>
+			    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+			  </div>
+
+			  <div class="form-actions">
+			    <%= f.button :submit, "Iniciar" %>
+			  </div>
+			<% end %>
+
+		<%= render "devise/shared/links" %>	
+	</div>
+	
+	<div class="col-md-6 col-xs-12 info_registro" >
+		<p> Si aun no te has registrado , puedes hacerlo en el siguiente enlace</p>
+		<%= link_to "registrar cliente", new_usuario_registration_path, class: "btn btn-primary" %>
+	</div>
+
+</div>

@@ -14,6 +14,14 @@
  *= require_self
  
  */
+.wrapper_skinny{
+	width: 60%;
+	margin: 0 auto;
+}
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "normalize";
+@import "organizacions";

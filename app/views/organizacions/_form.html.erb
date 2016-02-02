@@ -1,0 +1,8 @@
+<%= simple_form_for @organizacion do |f| %>
+  <%= f.input :nombre, label: 'Nombre de la Empresa: ' %>
+  <%= f.input :direccion %>
+  <%= f.input :descripcion %> 
+  <%= f.input :telefono %>
+     <%  @organizacion.estatus = 'activa' %>
+  <%= f.button :submit, "Crear organizacion" %>
+<% end %>

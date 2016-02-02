@@ -11,10 +11,20 @@
 
 	<body>
 		<%= render "partials/header" %>
+		
+		<% if alert %>
+			<p class="alert">
+				<%= alert %>
+			</p>
+		<% elsif notice %>
+			<p class="notice"><%= notice %></p>
+       	<% end %>	
+	
 
-
-		<%= yield %>
-
+		<div class="container">
+			<%= yield %>
+		</div>
+	
 
 		<%= render "partials/footer" %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>

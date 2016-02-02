@@ -1,21 +1,46 @@
-<div class="navbar-fixed">
-<nav>
-    <div class="nav-wrapper white">
-    	<div class="contenedor">
-    		<a href="" class="brand-logo">
-    			<img src="<%= asset_path 'logo.png' %>"><span id="logo-text">CR&Uuml;MBIK</span>
-    		</a>
-		      <ul id="nav-mobile" class="right hide-on-med-and-down">
-		        <li><a href="sass.html">Inicio</a></li>
-		        <li><a href="components.html">Servicios</a></li>
-		        <li><a href="javascript.html">Planes</a></li>
-		        <li><a href="components.html">Cont&aacute;ctanos</a></li>
-		      </ul>
-		      <ul id="nav-sesion" class="hide-on-med-and-down">
-		        <li><a href="sass.html">Iniciar sesi&oacute;n</a></li>
-		        <li><a href="components.html">Registrarse</a></li>
-		    </ul>
-    	</div>
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid" >
+  <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+       
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <a href="#" class="brand-logo ">
+          <img src="<%= asset_path 'logo.png' %>">
+        </a>
+        <a href=<% new_organizacion_path %> > <span id="logo-text" class="navbar-brand" style="float: right; margin: 1.5rem 0 .5rem 0;">CR&Uuml;MBIK</span></a>
+       
     </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin: 1.5rem 0 .5rem 0;">
+      <ul class="nav navbar-nav navbar-right">
+           
+           <li><%= link_to "Inicio", root_path %> </li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Planes</a></li>
+            <li><a href="#">Cont&aacute;ctanos</a></li>
+          <% unless usuario_signed_in? %>
+                <li><%= link_to "Iniciar sesion", usuario_session_path %></li>
+          <% else %>
+           <li><%= link_to "Cerrar sesion", destroy_usuario_session_path, method: :delete %></li>
+
+          <%end%>
+         
+            <li><%= link_to "Registrarse", new_organizacion_path %> </li>
+
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+
+  </div>
+  
+  </div><!-- /.container-fluid -->
 </nav>
-</div>

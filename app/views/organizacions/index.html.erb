@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12" style="text-align : center;">
+		
+		
+
+			<div class="list-group" >
+				<% @organizacions.each do |organizacion| %>
+					
+ 					<%= link_to organizacion.nombre, organizacion_path(organizacion) , :class => "list-group-item lefr"%></br>
+
+
+  				<% end %>
+			</div>
+				
+				 	
+		
+		</div>
+	</div>
+</div>
