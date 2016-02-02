@@ -1,7 +1,13 @@
 
 Rails.application.routes.draw do
-  root 'paginas#index'
+  devise_for :usuarios
   
+  root 'paginas#index'
+
+  resources :organizacions
+  resources :paginas
+
+   
 
 end
   # The priority is based upon order of creation: first created -> highest priority.

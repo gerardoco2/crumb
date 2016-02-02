@@ -1,0 +1,10 @@
+<h1><%= @organizacion.nombre %></h1>
+<ul>
+	<li><%= @organizacion.descripcion %></li>
+	<li><%= @organizacion.direccion %></li>
+	<li><%= @organizacion.telefono %></li>
+	<li><%= @organizacion.estatus %></li>
+
+</ul>
+<%= link_to "Atras", root_path %>
+<%= link_to "Editar", edit_organizacion_path(@organizacion) %>

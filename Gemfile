@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
-gem 'materialize-sass'
+#gem 'materialize-sass'
 gem 'rails', '4.2.5'
 #agregar bootstrap y asegurar saas en rails
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
@@ -36,6 +36,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
+
+gem 'font-awesome-sass'
+
+gem 'devise', '~> 3.5', '>= 3.5.6'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
