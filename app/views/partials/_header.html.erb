@@ -27,8 +27,13 @@
             <li><a href="#">Servicios</a></li>
             <li><a href="#">Planes</a></li>
             <li><a href="#">Cont&aacute;ctanos</a></li>
-          
-            <li><a href="#">Iniciar sesi&oacute;n</a></li>
+          <% unless usuario_signed_in? %>
+                <li><%= link_to "Iniciar sesion", usuario_session_path %></li>
+          <% else %>
+           <li><%= link_to "Cerrar sesion", destroy_usuario_session_path, method: :delete %></li>
+
+          <%end%>
+         
             <li><%= link_to "Registrarse", new_organizacion_path %> </li>
 
       </ul>

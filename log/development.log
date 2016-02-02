@@ -14786,3 +14786,617 @@ Processing by PaginasController#index as HTML
   Rendered partials/_header.html.erb (1.6ms)
   Rendered partials/_footer.html.erb (1.1ms)
 Completed 200 OK in 116ms (Views: 115.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-02 02:07:53 -0430
+Processing by PaginasController#index as HTML
+  Rendered paginas/index.html.erb within layouts/application (0.5ms)
+  Rendered partials/_header.html.erb (32.9ms)
+Completed 500 Internal Server Error in 362ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `usuarios_signed_in?' for #<#<Class:0xb351ef60>:0xb1819a00>):
+    27:             <li><a href="#">Servicios</a></li>
+    28:             <li><a href="#">Planes</a></li>
+    29:             <li><a href="#">Cont&aacute;ctanos</a></li>
+    30:           <% unless usuarios_signed_in? %>
+    31:                <li><a href="#">Iniciar sesi&oacute;n</a></li>
+    32:           <% else %>
+    33:            <li><a href="#">Cerrar sesi&oacute;n</a></li>
+  app/views/partials/_header.html.erb:30:in `_app_views_partials__header_html_erb___953823711__679526578'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__77223718__658325948'
+
+
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.4ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (30.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (70.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-02 02:08:17 -0430
+Processing by PaginasController#index as HTML
+  Rendered paginas/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUsuario Load (6.2ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ?  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered partials/_header.html.erb (36.3ms)
+  Rendered partials/_footer.html.erb (14.2ms)
+Completed 200 OK in 252ms (Views: 235.7ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-02 02:10:35 -0430
+Processing by PaginasController#index as HTML
+  Rendered paginas/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ?  ORDER BY "usuarios"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered partials/_header.html.erb (4.2ms)
+  Rendered partials/_footer.html.erb (1.2ms)
+Completed 200 OK in 129ms (Views: 127.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/usuarios/sign_out" for 127.0.0.1 at 2016-02-02 02:10:38 -0430
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kG4Mr5CkcIGq8PJa+Y7Q1euH2RIFwaVH7Vuou5zgh13O3ew2vgn2mHV6jEDd5MfAt/+SVpgEqJEehswl8WPhVQ=="}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ?  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 72ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-02 02:10:38 -0430
+Processing by PaginasController#index as HTML
+  Rendered paginas/index.html.erb within layouts/application (0.1ms)
+  Rendered partials/_header.html.erb (2.1ms)
+  Rendered partials/_footer.html.erb (1.3ms)
+Completed 200 OK in 135ms (Views: 134.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:11:01 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (16.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (91.1ms)
+  Rendered partials/_header.html.erb (2.5ms)
+  Rendered partials/_footer.html.erb (2.0ms)
+Completed 200 OK in 252ms (Views: 250.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:12:29 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (32.9ms)
+  Rendered partials/_header.html.erb (2.5ms)
+  Rendered partials/_footer.html.erb (1.6ms)
+Completed 200 OK in 181ms (Views: 179.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:15:42 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.2ms)
+  Rendered partials/_header.html.erb (2.1ms)
+  Rendered partials/_footer.html.erb (1.5ms)
+Completed 200 OK in 198ms (Views: 195.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:17:44 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (8.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (32.4ms)
+  Rendered partials/_header.html.erb (2.3ms)
+  Rendered partials/_footer.html.erb (1.5ms)
+Completed 200 OK in 176ms (Views: 174.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:20:28 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (14.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (45.9ms)
+  Rendered partials/_header.html.erb (2.2ms)
+  Rendered partials/_footer.html.erb (3.2ms)
+Completed 200 OK in 207ms (Views: 204.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2016-02-02 02:20:30 -0430
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (22.7ms)
+  Rendered partials/_header.html.erb (2.0ms)
+  Rendered partials/_footer.html.erb (1.3ms)
+Completed 200 OK in 181ms (Views: 179.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:20:35 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (10.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (32.2ms)
+  Rendered partials/_header.html.erb (1.8ms)
+  Rendered partials/_footer.html.erb (1.4ms)
+Completed 200 OK in 184ms (Views: 182.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:21:38 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (11.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (44.4ms)
+  Rendered partials/_header.html.erb (2.2ms)
+  Rendered partials/_footer.html.erb (1.6ms)
+Completed 200 OK in 180ms (Views: 178.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:25:51 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+  Rendered partials/_header.html.erb (2.2ms)
+  Rendered partials/_footer.html.erb (1.5ms)
+Completed 200 OK in 4645ms (Views: 4643.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/organizacions.self-6780fc12bdf5231d67ff9038051b43ae27061775d4e20884a15ae9c7843a551d.css?body=1" for 127.0.0.1 at 2016-02-02 02:25:55 -0430
+
+
+Started GET "/assets/application.self-aa84551043e9bfc2f7420a78859dab9de76563bd945fe7fce7525dccbc861333.css?body=1" for 127.0.0.1 at 2016-02-02 02:25:55 -0430
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.3.0" for 127.0.0.1 at 2016-02-02 02:25:56 -0430
+
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (79.9ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.8ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff?v=4.3.0" for 127.0.0.1 at 2016-02-02 02:25:56 -0430
+
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.4ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (29.2ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (59.8ms)
+
+
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.3.0" for 127.0.0.1 at 2016-02-02 02:25:56 -0430
+
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.1ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (28.2ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (56.5ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:27:06 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (10.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+  Rendered partials/_header.html.erb (1.8ms)
+  Rendered partials/_footer.html.erb (1.3ms)
+Completed 200 OK in 3598ms (Views: 3596.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/frontend.self-89d262627a882c9a4eae429200aaa31c3a4bf085b36786ac1c25b196abac3a62.css?body=1" for 127.0.0.1 at 2016-02-02 02:27:09 -0430
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:28:30 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (11.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (37.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+  Rendered partials/_header.html.erb (2.0ms)
+  Rendered partials/_footer.html.erb (1.3ms)
+Completed 200 OK in 3969ms (Views: 3967.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/frontend.self-95b182d90a8c8f963a92f808fd875a3408a8ebd9679d6a182fc99f7df98caab7.css?body=1" for 127.0.0.1 at 2016-02-02 02:28:34 -0430
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:29:25 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.9ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+  Rendered partials/_header.html.erb (2.6ms)
+  Rendered partials/_footer.html.erb (1.4ms)
+Completed 200 OK in 3965ms (Views: 3962.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/frontend.self-b4ae444ba069b06d9571e85afdc72079014b74ea670b351620385ff95ab49099.css?body=1" for 127.0.0.1 at 2016-02-02 02:29:29 -0430
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:32:08 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.7ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+  Rendered partials/_header.html.erb (1.7ms)
+  Rendered partials/_footer.html.erb (1.3ms)
+Completed 200 OK in 3726ms (Views: 3724.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/frontend.self-33546637be3579e623e202ebfc45f197bf2f9fb78993009054eece0827b53d7a.css?body=1" for 127.0.0.1 at 2016-02-02 02:32:12 -0430
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:32:53 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (32.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+  Rendered partials/_header.html.erb (1.8ms)
+  Rendered partials/_footer.html.erb (1.4ms)
+Completed 200 OK in 3724ms (Views: 3721.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/frontend.self-2b086825fae081787d98058fd5843a46bc32f176d2b9c9a99cd08b703ee05ccf.css?body=1" for 127.0.0.1 at 2016-02-02 02:32:57 -0430
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.3.0" for 127.0.0.1 at 2016-02-02 02:32:57 -0430
+
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (29.8ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (60.4ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff?v=4.3.0" for 127.0.0.1 at 2016-02-02 02:32:57 -0430
+
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.3ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (81.0ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.4ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (67.8ms)
+
+
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.3.0" for 127.0.0.1 at 2016-02-02 02:32:58 -0430
+
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu14/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.9ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (30.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/ubuntu14/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (62.6ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:34:01 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (29.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+  Rendered partials/_header.html.erb (2.2ms)
+  Rendered partials/_footer.html.erb (1.3ms)
+Completed 200 OK in 3803ms (Views: 3801.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/frontend.self-c588565c5e405ab002a50c487f93378e77ee71d668554874c2de413d4cc694f3.css?body=1" for 127.0.0.1 at 2016-02-02 02:34:04 -0430
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:35:16 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (32.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.css.scss to /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/assets/stylesheets/normalize.scss. (called from _app_views_layouts_application_html_erb__77223718__658325948 at /home/ubuntu14/Documentos/Laboratorio 3/crumbik/app/views/layouts/application.html.erb:5)
+  Rendered partials/_header.html.erb (2.0ms)
+  Rendered partials/_footer.html.erb (1.4ms)
+Completed 200 OK in 3884ms (Views: 3882.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/frontend.self-5b184b717ce81bb5da7fb4493371f6d227a5f088b0f55db58f24848186d85a94.css?body=1" for 127.0.0.1 at 2016-02-02 02:35:20 -0430
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2016-02-02 02:35:37 -0430
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.8ms)
+  Rendered partials/_header.html.erb (2.0ms)
+  Rendered partials/_footer.html.erb (1.2ms)
+Completed 200 OK in 142ms (Views: 140.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2016-02-02 02:36:39 -0430
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (34.5ms)
+  Rendered partials/_header.html.erb (2.1ms)
+  Rendered partials/_footer.html.erb (1.5ms)
+Completed 200 OK in 201ms (Views: 199.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/organizacions/new" for 127.0.0.1 at 2016-02-02 02:36:56 -0430
+Processing by OrganizacionsController#new as HTML
+  Rendered organizacions/_form.html.erb (11.8ms)
+  Rendered organizacions/new.html.erb within layouts/application (29.3ms)
+  Rendered partials/_header.html.erb (2.9ms)
+  Rendered partials/_footer.html.erb (1.2ms)
+Completed 200 OK in 255ms (Views: 253.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/organizacions/" for 127.0.0.1 at 2016-02-02 02:38:35 -0430
+Processing by OrganizacionsController#index as HTML
+  [1m[35mOrganizacion Load (0.5ms)[0m  SELECT "organizacions".* FROM "organizacions"  ORDER BY created_at DESC
+  Rendered organizacions/index.html.erb within layouts/application (2.6ms)
+  Rendered partials/_header.html.erb (3.0ms)
+  Rendered partials/_footer.html.erb (1.2ms)
+Completed 200 OK in 159ms (Views: 157.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:38:38 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (8.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.9ms)
+  Rendered partials/_header.html.erb (1.8ms)
+  Rendered partials/_footer.html.erb (1.2ms)
+Completed 200 OK in 139ms (Views: 137.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/organizacions/new" for 127.0.0.1 at 2016-02-02 02:38:47 -0430
+Processing by OrganizacionsController#new as HTML
+  Rendered organizacions/_form.html.erb (10.8ms)
+  Rendered organizacions/new.html.erb within layouts/application (12.0ms)
+  Rendered partials/_header.html.erb (2.7ms)
+  Rendered partials/_footer.html.erb (1.1ms)
+Completed 200 OK in 120ms (Views: 118.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:38:48 -0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (7.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.3ms)
+  Rendered partials/_header.html.erb (1.7ms)
+  Rendered partials/_footer.html.erb (1.1ms)
+Completed 200 OK in 133ms (Views: 132.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios/sign_in" for 127.0.0.1 at 2016-02-02 02:39:14 -0430
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bphr/4tdFXzY5118QX/7gni4CSCXryZsYY70NO/dhgWrAnka/wI+k7RxRUdBX/9PHJcEm4n1ExHA900TeWDeog==", "usuario"=>{"email"=>"gerardocolina@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar"}
+  [1m[36mUsuario Load (43.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ?  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["email", "gerardocolina@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (14.1ms)[0m  [1mUPDATE "usuarios" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["current_sign_in_at", "2016-02-02 07:09:15.126487"], ["sign_in_count", 2], ["updated_at", "2016-02-02 07:09:15.127592"], ["id", 1]]
+  [1m[35m (141.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 471ms (ActiveRecord: 198.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-02 02:39:15 -0430
+Processing by PaginasController#index as HTML
+  Rendered paginas/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ?  ORDER BY "usuarios"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered partials/_header.html.erb (2.9ms)
+  Rendered partials/_footer.html.erb (1.1ms)
+Completed 200 OK in 111ms (Views: 110.2ms | ActiveRecord: 0.2ms)
